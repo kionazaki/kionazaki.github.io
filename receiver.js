@@ -11,7 +11,7 @@ window.onload = function() {
 
 		// Update the div element to display the message.
 		messageEle.innerHTML = e.origin+ " Message Received: " + e.data;
-		e.origin.postMessage('ansveeer', '*');
+		e.data.postMessage('ansveeer', '*');
 
 
 	}
