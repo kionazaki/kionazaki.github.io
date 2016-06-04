@@ -3,6 +3,8 @@ window.onload = function() {
 	// message text.
 	var messageEle = document.getElementById('message');
 
+	localStorage.setItem('mama', 'tanya');
+	
 	// A function to process messages received by the window.
 	function receiveMessage(e) {
 		// Check to make sure that this message came from the correct domain.
