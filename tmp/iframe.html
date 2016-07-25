@@ -19,45 +19,5 @@
             return;
         }
     };
-    
-    
-    
-    
-    
-    
-/* window.addEventListener(
-  "message",
-  function (e) {
-    alert(e.origin);
-  },
-  false); 
-    
-    
-   
-   
-    document.domain = "localhost";
-    window.onmessage = function(e) {
-        
-        alert(e.origin);
-        
-        if (e.origin !== "http://domain.com") {
-            return;
-        }
-        var payload = JSON.parse(e.data);
-        switch(payload.method) {
-            case 'set':
-                localStorage.setItem(payload.key, JSON.stringify(payload.data));
-                break;
-            case 'get':
-                var parent = window.parent;
-                var data = localStorage.getItem(payload.key);
-                parent.postMessage(data, "*");
-                break;
-            case 'remove':
-                localStorage.removeItem(payload.key);
-                break;
-        }
-    };
-    
-    */
+
 </script>
