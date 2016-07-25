@@ -3,6 +3,7 @@
     
     
     window.onmessage = function(e) {
+        alert(e.data);
         if (e.origin !== "http://localhost:63342/") {
             return;
         }
