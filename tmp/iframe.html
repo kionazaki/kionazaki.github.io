@@ -1,9 +1,10 @@
 <script>
-    alert('666');
+    //alert('666');
     
     
     window.onmessage = function(e) {
         alert(e.data);
+        alert(e.origin);
         var parent = window.parent;
         parent.postMessage('xxxyyyzzz', "*");
         if (e.origin !== "http://localhost:63342/") {
