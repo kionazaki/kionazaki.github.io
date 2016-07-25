@@ -3,7 +3,9 @@
     
     
     window.onmessage = function(e) {
-        alert(e.data);
+        const id = e.data;
+        const domain = e.origin;
+        alert(id);
         alert(e.origin);
         var parent = window.parent;
         parent.postMessage('xxxyyyzzz', "*");
