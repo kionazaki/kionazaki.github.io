@@ -1,7 +1,21 @@
 <script>
     alert('666');
     
-window.addEventListener(
+    
+    window.onmessage = function(e) {
+        if (e.origin !== "http://localhost:63342/") {
+            return;
+        }
+        var parent = window.parent;
+        alert(e.data);
+    };
+    
+    
+    
+    
+    
+    
+/* window.addEventListener(
   "message",
   function (e) {
     alert(e.origin);
@@ -10,7 +24,7 @@ window.addEventListener(
     
     
    
-/*    
+   
     document.domain = "localhost";
     window.onmessage = function(e) {
         
