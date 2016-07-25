@@ -1,17 +1,10 @@
 <script>
     window.onmessage = function(e) {
         const msg_id = e.data,
-<<<<<<< HEAD
-                msg_domain = e.origin,
-                parent = window.parent;
-        let obj, id, token;
-
-=======
             msg_domain = e.origin,
             parent = window.parent;
         let obj, id, token;
-        
->>>>>>> origin/master
+
         try{
             obj = JSON.parse(localStorage.getItem('ewAuth'));
             id = obj.id;
@@ -19,17 +12,10 @@
         }
         catch(e){}
 
-<<<<<<< HEAD
         parent.postMessage(token, "*");
 
-=======
-        
-        parent.postMessage(token, "*");
-        
->>>>>>> origin/master
         if (e.origin !== "http://localhost:63342/") {
             return;
         }
     };
-
 </script>
