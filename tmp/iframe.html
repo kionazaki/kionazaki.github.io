@@ -11,7 +11,7 @@
             parent = window.parent;
         let obj, id, token;
         
->>>>>>> a66247c544f0c69a856c2e16a870f6d5dfd9d797
+>>>>>>> origin/master
         try{
             obj = JSON.parse(localStorage.getItem('ewAuth'));
             id = obj.id;
@@ -22,13 +22,12 @@
 <<<<<<< HEAD
         parent.postMessage(token, "*");
 
-        if (e.origin !== "http://localhost:63342/") {
 =======
         
         parent.postMessage(token, "*");
         
-        if (e.origin !== "6666http://localhost:63342/") {
->>>>>>> a66247c544f0c69a856c2e16a870f6d5dfd9d797
+>>>>>>> origin/master
+        if (e.origin !== "http://localhost:63342/") {
             return;
         }
     };
