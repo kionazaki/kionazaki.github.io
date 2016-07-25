@@ -4,11 +4,11 @@
     
     window.onmessage = function(e) {
         alert(e.data);
+        var parent = window.parent;
+        parent.postMessage('xxxyyyzzz', "*");
         if (e.origin !== "http://localhost:63342/") {
             return;
         }
-        var parent = window.parent;
-        alert(e.data);
     };
     
     
