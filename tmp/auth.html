@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auth</title>
+</head>
+<body>
+<button  onclick = "login()">Login</button>
+<button  onclick = "logout()">Logout</button>
+<hr>
+<div id="id"><b>id:</b><span></span></div>
+<div id="token"><b>token:</b><span></span></div>
+<hr>
+<div id="status"></div>
+<script>
+    function writeAuth(){
+        let elemId = document.querySelector('#id span');
+        let elemToken = document.querySelector('#token span');
+        let elemStatus = document.querySelector('#status');
+        try{
+            const obj = JSON.parse(localStorage.getItem('ewAuth'));
+            elemId.innerHTML = obj.id;
+            elemToken.innerHTML = obj.token;
+            elemStatus.innerHTML = 'LOGIN';
+        }
+        catch(error){
+            elemId.innerHTML = '';
+            elemToken.innerHTML = '';
+            elemStatus.innerHTML = 'LOGOUT';
+        }
+    }
+
+    function login(){
+        const ewAuth = {
+            id: 14,
+            token: '14ergee5gj54gjerseh89vmJHfef'
+        };
+        localStorage.setItem('ewAuth', JSON.stringify(ewAuth));
+        writeAuth();
+    }
+    
+    function logout(){
+        localStorage.setItem('ewAuth', undefined);
+        writeAuth();
+    }
+</script>
+
+
+
+</body>
+</html>
