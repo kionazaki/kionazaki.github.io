@@ -1,10 +1,12 @@
 <script>
     alert('666');
     
-    window.onmessage = function(e) {
-    alert('777');
-
-    };    
+window.addEventListener(
+  "message",
+  function (event) {
+    alert(777);
+  },
+  false); 
     
     
    
