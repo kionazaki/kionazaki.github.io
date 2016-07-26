@@ -40,7 +40,7 @@
         try {
             if (msg_id === id) {
                 ajaxGetAsync(
-                        'http://666kionazaki.github.io/tmp/dummy-check-domain.json?id=' + msg_id + '&domain=' + msg_domain,
+                        'http://kionazaki.github.io/tmp/dummy-check-domain.json?id=' + msg_id + '&domain=' + msg_domain,
                         function (r) {
                             // ≈сли домен действительно пренадлежит этому ID
                             if (JSON.parse(r).value) {
