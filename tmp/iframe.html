@@ -44,6 +44,7 @@
                 ajaxGetAsync(
                         'http://kionazaki.github.io/tmp/dummy-check-domain.json?id=' + msg_id + '&domain=' + msg_domain,
                         function (r) {
+                            alert(r);
                             // ≈сли домен действительно пренадлежит этому ID
                             if (JSON.parse(r).value) {
                                 parent.postMessage(token, "*");
