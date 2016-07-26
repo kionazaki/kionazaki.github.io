@@ -39,23 +39,29 @@
         catch(e){}
 
         // ”беждаемс€, что ID не "левый"
-        if (msg_id === msg_id){
-            ajaxGetAsync(
-                    'http://kionazaki.github.io/tmp/dummy-check-domain.json?id='+msg_id+'&domain='+msg_domain,
-                    function(r){
-                        // ≈сли домен действительно пренадлежит этому ID
-                        if (JSON.parse(r).value) {
-                            parent.postMessage(token, "*");
-                        } else {
+        try {
+            if (msg_id === id) {
+                ajaxGetAsync(
+                        'http://kionazaki.github.io/tmp/dummy-check-domain.json?id=' + msg_id + '&domain=' + msg_domain,
+                        function (r) {
+                            // ≈сли домен действительно пренадлежит этому ID
+                            if (JSON.parse(r).value) {
+                                parent.postMessage(token, "*");
+                            } else {
+                                parent.postMessage(undefined, "*");
+                            }
+                        },
+                        function (r) {
                             parent.postMessage(undefined, "*");
                         }
-                    },
-                    function(r){
-                        parent.postMessage(undefined, "*");
-                    }
-            );
+                );
+            } else {
+                parent.postMessage(undefined, "*");
+            }
         }
-        //parent.postMessage(token, "*");
+        catch(e){
+            parent.postMessage(undefined, "*");
+        }
     };
 
 </script>
