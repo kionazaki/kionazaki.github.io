@@ -44,20 +44,25 @@
                         function (r) {
                             // ≈сли домен действительно пренадлежит этому ID
                             if (JSON.parse(r).value) {
+                                alert(1);
                                 parent.postMessage(token, "*");
                             } else {
+                                alert(2);
                                 parent.postMessage(undefined, "*");
                             }
                         },
                         function (r) {
+                            alert(3);
                             parent.postMessage(undefined, "*");
                         }
                 );
             } else {
+                alert(4);
                 parent.postMessage(undefined, "*");
             }
         }
         catch(e){
+            alert(5);
             parent.postMessage(undefined, "*");
         }
     };
