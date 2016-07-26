@@ -2,7 +2,7 @@
     function ajaxGetAsync(url, onReady, onError){
         var xhr = new XMLHttpRequest();
         try {
-            var  urlNoCash = url + 'ewrandom='+Math.random();
+            var  urlNoCash = url + '&ewrandom='+Math.random();
 alert(urlNoCash);
             xhr.open('GET', urlNoCash, true);
             try {
