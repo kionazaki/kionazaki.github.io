@@ -44,21 +44,21 @@
                         function (r) {
                             // ≈сли домен действительно пренадлежит этому ID
                             if (JSON.parse(r).value) {
-                                parent.postMessage(token, "*");
+                                parent.postMessage({id:'easyweb', value: token}, "*");
                             } else {
-                                parent.postMessage(undefined, "*");
+                                parent.postMessage({id:'easyweb', value: undefined}, "*");
                             }
                         },
                         function (r) {
-                            parent.postMessage(undefined, "*");
+                            parent.postMessage({id:'easyweb', value: undefined}, "*");
                         }
                 );
             } else {
-                parent.postMessage(undefined, "*");
+                parent.postMessage({id:'easyweb', value: undefined}, "*");
             }
         }
         catch(e){
-            parent.postMessage(undefined, "*");
+            parent.postMessage({id:'easyweb', value: undefined}, "*");
         }
     };
 
