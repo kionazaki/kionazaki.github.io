@@ -5,9 +5,9 @@
     <title>Auth</title>
 </head>
 <body>
-hallo
+<div id="xxx">666</div>
 <script>
-    setInterval(function(){document.write('<br><br><br>'+JSON.stringify(localStorage))}, 2000);
+    setInterval(function(){document.getElementById('xxx').innerHTML =  JSON.stringify(localStorage)}, 2000);
 </script>
 </body>
 </html>
