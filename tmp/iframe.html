@@ -45,7 +45,6 @@ alert(localStorage.getItem('ewAuth'));
                         function (r) {
                             // ≈сли домен действительно пренадлежит этому ID
                             if (JSON.parse(r).value) {
-alert();
                                 parent.postMessage({id:'easyweb', value: token}, "*");
                             } else {
                                 parent.postMessage({id:'easyweb', value: undefined}, "*");
