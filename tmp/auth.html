@@ -14,11 +14,11 @@
 <div id="status"></div>
 <script>
     function writeAuth(){
-        let elemId = document.querySelector('#id span');
-        let elemToken = document.querySelector('#token span');
-        let elemStatus = document.querySelector('#status');
+        var elemId = document.querySelector('#id span');
+        var elemToken = document.querySelector('#token span');
+        var elemStatus = document.querySelector('#status');
         try{
-            const obj = JSON.parse(localStorage.getItem('ewAuth'));
+            var obj = JSON.parse(localStorage.getItem('ewAuth'));
             elemId.innerHTML = obj.id;
             elemToken.innerHTML = obj.token;
             elemStatus.innerHTML = 'LOGIN';
@@ -31,7 +31,7 @@
     }
 
     function login(){
-        const ewAuth = {
+        var ewAuth = {
             id: 14,
             token: '14ergee5gj54gjerseh89vmJHfef'
         };
